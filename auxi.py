@@ -5,13 +5,13 @@ from utils import *
 import json
 import csv
 
-STATIC_DIR = "/privapp/app/analyze/static/"
+STATIC_DIR = "/privapp/app/analyze-master/static/"
 OWNER_DATA = STATIC_DIR + "domain_owners.json"
 owner = parse_json(OWNER_DATA)
 
 #read data from csv
-csvfile = open("/privapp/app/analyze/results2.csv", 'r')
-csvfile_out = open ("/privapp/app/analyze/results2_out.csv", 'w')
+csvfile = open("/privapp/app/analyze-master/results2.csv", 'r')
+csvfile_out = open ("/privapp/app/analyze-master/results2_out.csv", 'w')
 
 fields = ("timestamp","json.testing_label","json.apk","json.device","json.category","json.PII","json.country","json.domain","json.fase","json.https","json.int_transfer","json.port")
 fields_out = ("timestamp","json.testing_label", "json.apk","json.device","json.category","json.PII","json.country","json.domain","json.fase","json.https","json.int_transfer","json.port", "json.categ", "json.ancestry", "json.categ_ancestry")
